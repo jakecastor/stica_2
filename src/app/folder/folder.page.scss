@@ -1,0 +1,47 @@
+.header {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.6rem;
+  place-items: center;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+
+  }
+
+  &__rooms {
+    background-color: #1da1f2;
+    transform: translateX(4rem);
+    @media only screen and (max-width: 600px) {
+     
+      transform: translateX(0);
+    }
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    color: #424242;
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+  }
+  &__vaccination-card {
+    @media only screen and (max-width: 600px) {
+     
+      transform: translateX(0);
+    }
+    transform: translateX(-4rem);
+    background-color: #ffd700;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    color: #424242;
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+  }
+}

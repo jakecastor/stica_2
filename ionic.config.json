@@ -1,0 +1,7 @@
+{
+  "name": "stica pass",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

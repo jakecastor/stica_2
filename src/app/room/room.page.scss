@@ -1,0 +1,73 @@
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.room {
+  &__add-room {
+    background-color: #1da1f2;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: inline-block;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem 0;
+    &--icon {
+      transform: translateY(0.1rem);
+      margin-right: 0.6rem;
+    }
+  }
+  &__generate-reports {
+    background-color: #fd6969;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+
+    &--icon {
+      transform: translateY(0.1rem);
+      margin-right: 0.6rem;
+    }
+  }
+}
+
+.list-of-room {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 1rem;
+}
+.room-number {
+  width: 100%;
+}
+.item-room {
+  cursor: pointer;
+}
+
+.list-of-student {
+  background-color: #e7e9eb;
+  width: 100%;
+  height: 100vh;
+  padding: 0 1rem;
+  &__title {
+    font-size: 1.2rem;
+    color: #424242;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+  }
+  &__name {
+    list-style: none;
+    padding: 0 0.5rem;
+    background-color: #ffffff;
+    padding: 1rem 0.5rem;
+    border-radius: 2px;
+  }
+}

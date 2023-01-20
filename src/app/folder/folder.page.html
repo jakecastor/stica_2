@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <header class="header">
+      <div class="header__rooms" [routerLink]="['/room']">
+        <ion-icon style="margin-right:5px" name="videocam-outline"></ion-icon>Rooms
+      </div>
+      <div class="header__vaccination-card" [routerLink]="['/vaccination-page']">
+        <ion-icon name="card-outline" style="margin-right:5px"></ion-icon>Vaccination Card
+      </div>
+    </header>
+
+  </div>
+</ion-content>

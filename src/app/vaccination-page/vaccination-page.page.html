@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Vaccination Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <div class="content">
+      <div class="vacc-section">
+        <div class="vacc-title">Vaccination Card</div>
+      </div>
+      <div class="student-section">
+        <div class="student-title">Student Name</div>
+      </div>
+      <div class="approve-section">
+        <div class="approve-title">Approve</div>
+      </div>
+      <div class="reject-section">
+        <div class="reject-title">Reject</div>
+      </div>
+    </div>
+
+    <div class="vacc-picture-section">
+      <div class="vacc-picture-section__item" *ngFor="let student of students;let indexOfelement=index;">
+        <p class="vacc-picture-section__item__no">{{indexOfelement+1}}</p>
+        <img class="vacc-picture-section--img" (click)="imageClicked(student.VaccinationCard)"
+          [src]="student.VaccinationCard" alt="" *ngIf="student.VaccinationCard">
+        <h4 *ngIf="!student.VaccinationCard">No Vaccination Card</h4>
+        <p class="vacc-picture-section__item__name">{{student.fullname}}</p>
+        <p>
+          <ion-icon class="vacc-picture-section--icon-approve" name="checkmark-outline"></ion-icon>
+        </p>
+        <p>
+          <ion-icon class="vacc-picture-section--icon-reject" name="close-outline"></ion-icon>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modalBackground" *ngIf="isModalOn" (click)="modalBackgroundClick()">
+    <img class="modalImage" [src]="imageSelected" alt="">
+  </div>
+
+</ion-content>
